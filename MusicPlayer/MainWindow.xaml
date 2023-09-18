@@ -192,8 +192,8 @@
                         <icon:PackIconMaterial Kind="SkipPrevious" />
                     </Button>
 
-                    <Button Style="{StaticResource playerbutton}">
-                        <icon:PackIconMaterial Kind="Pause" />
+                    <Button Style="{StaticResource playerbutton}" Click="Button_Click">
+                        <icon:PackIconMaterial Kind="Play"  />
                     </Button>
 
                     <Button Style="{StaticResource playerbutton}">
