@@ -1,0 +1,217 @@
+﻿<Window x:Class="MusicPlayer.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:icon="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        xmlns:uc="clr-namespace:MusicPlayer.UserControls"
+        Height="700" Width="1050" ResizeMode="NoResize" AllowsTransparency="True"
+        WindowStartupLocation="CenterScreen" WindowStyle="None"
+        Background="Transparent" >
+    
+    <Border Background="White" CornerRadius="40" MouseDown="Border_MouseDown">
+
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="220" />
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="100" />
+            </Grid.RowDefinitions>
+
+            <Border Background="White" CornerRadius="40 0 0 40" Grid.RowSpan="2">
+
+                <StackPanel Margin="0 30 0 0">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="63 10 0 10">
+
+                        <Ellipse Fill="#ff6258" Width="10" Height="10" />
+                        <Ellipse Fill="#ffbf2f" Width="10" Height="10" Margin="7 0" />
+                        <Ellipse Fill="#2acb42" Width="10" Height="10" />
+
+                    </StackPanel>
+
+                    <TextBlock Text="Library" Style="{StaticResource menutitle}" />
+
+                    <Button Style="{StaticResource menubutton}" Background="#02be68" Foreground="White">
+                        <Grid>
+                            <TextBlock Text="Home" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" Visibility="Visible" />
+                            
+                        </Grid>
+                    </Button>
+
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Playlist" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Artists" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Albums" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Songs" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+
+                    <TextBlock Text="DISCOVERY" Style="{StaticResource menutitle}" />
+
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Store" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="Radio" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+                    <Button Style="{StaticResource menubutton}">
+                        <Grid>
+                            <TextBlock Text="For you" Margin="0 0 0 2" />
+                            <icon:PackIconMaterial Kind="AccountArrowRight" Style="{StaticResource menubuttonicon}" />
+
+                        </Grid>
+                    </Button>
+
+                </StackPanel>
+                
+            </Border>
+
+            <StackPanel Grid.Column="1" Background="White" Margin="40 60 10 0">
+
+                <TextBlock Text="Home" Style="{StaticResource titletext}" />
+
+                <Border CornerRadius="20" Margin="0 20 0 0 ">
+                    <Border.Background>
+                        <LinearGradientBrush>
+                            <GradientStop Color="#30ad9a" Offset="0"/>
+                            <GradientStop Color="#18c274" Offset="1"/>
+
+                        </LinearGradientBrush>
+                    </Border.Background>
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="20" ShadowDepth="0" Opacity="0.4" Color="#1fae7e"/>
+                        
+                    </Border.Effect>
+
+                    <Grid>
+                        <Border Opacity="0.07" CornerRadius="20">
+                            <Border.Background>
+                                <ImageBrush ImageSource="Images/shriji.jpg" />
+                            </Border.Background>
+                        </Border>
+
+                        <StackPanel Margin="30">
+                            <TextBlock Text="Daily Singer" Foreground="White" FontSize="26" FontWeight="Bold" />
+                            <TextBlock Text="Taylor Swift" Foreground="#c0e6de" FontSize="18" FontWeight="SemiBold" Margin="0 10 0 20" />
+
+                            <uc:SongItem Number="01" Title="My Title 1" Time="03:56" />
+                            <uc:SongItem Number="02" Title="My Title 2" Time="03:45" />
+                            <uc:SongItem Number="03" Title="My Title 3" Time="02:44" />
+                            <uc:SongItem Number="04" Title="My Title 4" Time="04:23" IsActive="True" />
+                            <uc:SongItem Number="05" Title="My Title 5" Time="03:22" />
+                            <uc:SongItem Number="06" Title="My Title 6" Time="04:12" />
+                            <uc:SongItem Number="07" Title="My Title 7" Time="03:14" />
+                        </StackPanel>
+
+                       
+
+                    </Grid>
+                    
+                </Border>
+                    
+            </StackPanel>
+
+            <Border Grid.Column="2" CornerRadius="0 40 0 0" Background="White" Margin="0,22,0,50" Grid.RowSpan="2">
+
+                <StackPanel Margin="30 50 30 0">
+                    <TextBlock Text="Popular" Style="{StaticResource titletext}" 
+                               FontSize="28"
+                               Margin="0 0 0 10" />
+
+                    <uc:PopularSong Title="Okay 1" Time="03:24" Image="/Images/shriji.jpg"/>
+                    <uc:PopularSong Title="Okay 1" Time="03:24" Image="/Images/shriji.jpg"/>
+                    <uc:PopularSong Title="Okay 1" Time="03:24" Image="/Images/shriji.jpg" IsActive="True"/>
+                    <uc:PopularSong Title="Okay 1" Time="03:24" Image="/Images/shriji.jpg"/>
+               
+                    <TextBlock Text="Playlist" Style="{StaticResource titletext}" 
+                               FontSize="24"
+                               Margin="0 30 0 20" />
+
+                    <StackPanel Orientation="Horizontal">
+                        <uc:Playlist Image="/Images/shriji.jpg" Title="Song 1" Desc="Okay" />
+                        <uc:Playlist Image="/Images/shriji.jpg" Title="Song 1" Desc="Okay" Margin="4 0 0 0" />
+                    </StackPanel>
+                    
+                </StackPanel>
+
+
+            </Border>
+
+            <Border Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="2" Background="#03bf69" CornerRadius="40 0 40 0" Margin="40 0 0 0">
+
+                <StackPanel Orientation="Horizontal">
+
+                    <Ellipse Width="60" Height="60" Margin="30 0 0 0">
+                        <Ellipse.Fill>
+                            <ImageBrush ImageSource="/Images/shriji.jpg"/>
+                        </Ellipse.Fill>
+                    </Ellipse>
+
+                    <StackPanel VerticalAlignment="Center" Margin="20 0 30 0">
+                        <TextBlock Text="ME" Foreground="White" FontSize="22" FontWeight="Bold"/>
+                        <TextBlock Text="Taylor Song Vage" Foreground="#9ae5c3" FontSize="18" FontWeight="SemiBold"/>
+                    </StackPanel>
+
+                    <Button Style="{StaticResource playerbutton}">
+                        <icon:PackIconMaterial Kind="SkipPrevious" />
+                    </Button>
+
+                    <Button Style="{StaticResource playerbutton}">
+                        <icon:PackIconMaterial Kind="Pause" />
+                    </Button>
+
+                    <Button Style="{StaticResource playerbutton}">
+                        <icon:PackIconMaterial Kind="SkipNext" />
+                    </Button>
+
+                    <Slider Style="{DynamicResource SliderStyle1}" x:Name="slider" IsSelectionRangeEnabled="True" VerticalAlignment="Center" Value="5" Width="300" SelectionEnd="{Binding ElementName=slider,Path=Value}"  />
+
+                    <Button Style="{StaticResource playerbutton}">
+                        <icon:PackIconMaterial Kind="VolumeMedium" />
+                    </Button>
+
+
+                </StackPanel>
+                
+            </Border>
+            
+        </Grid>
+        
+    </Border>
+</Window>
